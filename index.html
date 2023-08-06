@@ -225,7 +225,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/33iy9St0hBw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CIxfsH6jL9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -239,13 +239,20 @@
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Mobile Manipulator that leads exercise</h2>
+        <h2 class="title is-3">Leading Exercises with a Mobile Manipulator</h2>
 
         <p>
           Sws is a robotic system for physical therapy with a dynamic exercise difficulty adjustment system. This system adapts to individuals in three ways: first, by estimating a user's range of motion using simple kinematic models; second, by directly sampling a user's range of motion through haptic interaction; and third, by adapting the difficulty of an exercise based on models of a user's performance.
         </p>
 
-        <!-- Interpolating. -->
+        <img src="./static/images/exercise_grid.gif"
+        class="exercise-grid"
+        alt="Examples of 9 exercises designed based on LSVT BIG"/>
+        
+        <br>
+        <br>
+
+        <!-- First content. -->
         <h3 class="title is-4">Personalized to Human kinematic Model</h3>
         <div class="content has-text-justified">
           <p>
@@ -275,33 +282,32 @@
           </div>
         </div>
         <br/>
-        <!--/ Interpolating. -->
+        <!--/ first content -->
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- Second Content -->
+        <h3 class="title is-4">Range of Motion with Haptic Feedback</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            <span class="dnerf">Sws</span> is able to capture the range of motion of the user by asking the user to reach the robot's end effector. The robot can then adjust the exercise to the user's range of motion.
           </p>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
+        <!--/ Range of motion -->
+        
+        <!-- Third Content -->
+        <h3 class="title is-4">Adaptive exercise diificulty with user performance model</h3>
+        <div class="content has-text-justified">
+          <p>
+            The exercise difficulty can be adjusted based on the user's performance. The robot can adjust the exercise difficulty by moving along a difficulty vector. The difficulty vector is computed based on the user's kinematic model.
+          </p>
+          <img src="./static/images/calib-perf-animation.gif"
+               class="haptic-feedback"
+               alt="Haptic feedback"
+               width="85%"/>
+          <!-- </div> -->
         </div>
-        <!--/ Re-rendering. -->
-
       </div>
     </div>
     <!--/ Animation. -->
-
 
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
@@ -313,8 +319,7 @@
             Through a user study (`n=10`), we show that people with PD have a positive impression of SWS, and perceive it as useful and easy to use. By analyzing video ratings of the exercise sessions, assessed by a movement scientist, we demonstrate that individuals suffering from PD are typically capable of correctly executing exercises led by a robot. This demonstrates the feasibility of robot-led physical therapy.
           </p>
 
-
-        <img src="" alt="">
+        <img src='./static/images/participants.png' width='100%'/>
         </div>
       </div>
     </div>
