@@ -42,7 +42,6 @@
   </div>
 </nav>
 
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -96,7 +95,7 @@
               </span> -->
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://www.youtube.com/watch?v=CIxfsH6jL9Q"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -106,7 +105,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/mlamsey/stretch-with-stretch"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -114,17 +113,7 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
-
           </div>
         </div>
       </div>
@@ -213,7 +202,7 @@
             Physical Therapy (PT) is a key component of many rehabilitation regimens. Administering PT exercises in a clinical setting can be a cognitively and physically demanding process for physical therapists. Additionally, user adherence to self-guided PT "homework" outside of the clinic is often inconsistent. To address these issues, we present Stretch with Stretch (SWS), an interactive robotic system for leading stretching exercise games. 
           </p>
           <p>
-            SWS consists of a mobile manipulator that physically and verbally guides users through physical therapy exercises. The robot's soft end effector serves as a target for users to reach towards and press on with a hand, foot, or knee. The location of these targets is customized for individuals in three ways: first, based on individuals' body dimensions; second, based on direct sampling of individuals' range of motion; and third, by dynamically adjusting the target's distance from the user based on the user's performance. Additionally, the system includes sound effects and verbal feedback from the robot to keep users engaged throughout an exercise session. Through a user study ($n=5$) of individuals with Parkinson's Disease (PD), we demonstrate that SWS an effective and engaging platform for leading exercises related to the treatment of PD.
+            SWS consists of a compact and lightweight mobile manipulator (Hello Robot Stretch RE1) that visually and verbally guides users through PT exercises. The robot's soft end effector serves as a target for users to repetitively reach towards and press with a hand, foot, or knee. For each exercise, target locations are customized for the individual via a visually estimated kinematic model, a haptically estimated range of motion, and the person's exercise performance. The system includes sound effects and verbal feedback from the robot to keep users engaged throughout a session and augment physical exercise with cognitive exercise. We conducted a user study for which people with PD ($n=10$) performed 6 exercises with the system. Participants perceived the SWS to be useful and easy to use. They also reported mild to moderate perceived exertion (RPE)
           </p>
         </div>
       </div>
@@ -239,27 +228,39 @@
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Leading Exercises with a Mobile Manipulator</h2>
-
-        <p>
-          Sws is a robotic system for physical therapy with a dynamic exercise difficulty adjustment system. This system adapts to individuals in three ways: first, by estimating a user's range of motion using simple kinematic models; second, by directly sampling a user's range of motion through haptic interaction; and third, by adapting the difficulty of an exercise based on models of a user's performance.
-        </p>
-
         <img src="./static/images/exercise_grid.gif"
         class="exercise-grid"
         alt="Examples of 9 exercises designed based on LSVT BIG"/>
-        
+
         <br>
         <br>
 
+        <h2 class="title is-3">Leading Exercises with a Mobile Manipulator</h2>
+
+        <p>The SWS is a robotic system designed for physical therapy, featuring a dynamic exercise difficulty adjustment mechanism. This system tailors its approach to individual users in three distinct ways:</p>
+
+        <ul>
+            <li>1. Estimating a user's range of motion using straightforward kinematic models.</li>
+            <li>2. Directly measuring a user's range of motion through haptic feedback.</li>
+            <li>3. Modifying the exercise difficulty based on data-driven models of the user's performance.</li>
+        </ul>
+
+        <br>
+
         <!-- First content. -->
-        <h3 class="title is-4">Personalized to Human kinematic Model</h3>
+        <h3 class="title is-4">1. Personalized to Human kinematic Model</h3>
         <div class="content has-text-justified">
           <p>
             Sws can personalized the exercise to the user's body dimension. The robot can estimate the user's body dimension by measuring the user's height and arm length. The robot can also directly sample the user's range of motion by asking the user to reach the robot's end effector. The robot can then adjust the exercise to the user's body dimension.
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
+
+        <img src="./static/images/exercise_models_9.png"
+             class="kinematic-model"
+             alt="Kinematic model"
+             width="85%"/>
+
+        <!-- <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
             <img src="./static/images/interpolate_start.jpg"
                  class="interpolation-image"
@@ -280,24 +281,24 @@
                  alt="Interpolation end reference image."/>
             <p class="is-bold">End Frame</p>
           </div>
-        </div>
+        </div> -->
         <br/>
         <!--/ first content -->
 
         <!-- Second Content -->
-        <h3 class="title is-4">Range of Motion with Haptic Feedback</h3>
+        <h3 class="title is-4">2. Range of Motion with Haptic Feedback</h3>
         <div class="content has-text-justified">
           <p>
-            <span class="dnerf">Sws</span> is able to capture the range of motion of the user by asking the user to reach the robot's end effector. The robot can then adjust the exercise to the user's range of motion.
+            <span class="dnerf">Sws</span> is able to directly capture the range of motion of the user by having the user interacting with the robot's end effector, which serves as a target. The robot can then adjust the exercise to the user's range of motion.
           </p>
         </div>
         <!--/ Range of motion -->
         
         <!-- Third Content -->
-        <h3 class="title is-4">Adaptive exercise diificulty with user performance model</h3>
+        <h3 class="title is-4">3. Adaptive exercise diificulty with user performance model</h3>
         <div class="content has-text-justified">
           <p>
-            The exercise difficulty can be adjusted based on the user's performance. The robot can adjust the exercise difficulty by moving along a difficulty vector. The difficulty vector is computed based on the user's kinematic model.
+            The exercise difficulty is dynamically adjusted based on the user's performance. The robot can adjust the exercise difficulty by moving along a difficulty vector. The difficulty vector is computed based on the user's kinematic model. All components are personalized according to the user's kinematic model, range of motion, and current performance, which are then recorded for further analysis.
           </p>
           <img src="./static/images/calib-perf-animation.gif"
                class="haptic-feedback"
@@ -316,7 +317,7 @@
 
         <div class="content has-text-justified">
           <p>
-            Through a user study (`n=10`), we show that people with PD have a positive impression of SWS, and perceive it as useful and easy to use. By analyzing video ratings of the exercise sessions, assessed by a movement scientist, we demonstrate that individuals suffering from PD are typically capable of correctly executing exercises led by a robot. This demonstrates the feasibility of robot-led physical therapy.
+            In our user study involving ten participants, we found that individuals with Parkinson's Disease (PD) have a favorable perception of the SWS system, viewing it as both beneficial and user-friendly. Our current robotic system offers verbal instructions and auditory feedback to the users. As part of the therapeutic process, participants engage in cognitive exercises, such as naming various U.S. states and animals during their physical activities. Our findings indicate that people with PD are generally capable of accurately following and executing exercises guided by a robot, underscoring the potential of robot-led physical therapy. A comprehensive analysis of these results can be found in the accompanying paper.
           </p>
 
         <img src='./static/images/participants.png' width='100%'/>
@@ -345,10 +346,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="./static/sws.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/mlamsey/stretch-with-stretch" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
